@@ -903,47 +903,6 @@
             color: var(--primary);
         }
 
-        .contact-form {
-            background-color: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-            text-align: left;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: 600;
-            font-size: 1.05rem;
-            color: var(--dark);
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 15px 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-family: 'Poppins', sans-serif;
-            transition: var(--transition);
-            font-size: 1rem;
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(0,51,102,0.1);
-        }
-
-        textarea.form-control {
-            min-height: 180px;
-            resize: vertical;
-        }
-
         /* Footer */
         footer {
             background-color: var(--primary);
@@ -1165,10 +1124,6 @@
 
             .contact-container {
                 grid-template-columns: 1fr;
-            }
-
-            .contact-form {
-                padding: 30px;
             }
 
             .achievements-container {
@@ -1558,7 +1513,7 @@
                     <ul class="education-achievements">
                         <li>Engagement & Commiite Member of SARC, IMAGES, and PECFEST.</li>
                         <li>Led <span class="highlight">University Basketball Team</span> in Inter-college events</li>
-                        <li>Published research in <span class="highlight">International Conference SMET-2024, Kurukshetra, India.</span></li>
+                        <li>Published research paper in <span class="highlight">International Conference SMET-2024, Kurukshetra, India.</span></li>
                     </ul>
                 </div>
                 
@@ -1604,7 +1559,7 @@
                 <div class="certification-card">
                     <h3 class="certification-title">Lean Six Sigma White Belt</h3>
                     <span class="certification-issuer">Council for Six Sigma Certification</span>
-                    <p class="certification-details"></p>
+                    <p class="certification-details">Process Improvement, Six Sigma Principles, Agile Methodologies, Lean Tools, Root Cause Analysis, Process Mapping</p>
                 </div>
                 
                 <div class="certification-card">
@@ -1626,9 +1581,9 @@
                 </div>
                 
                 <div class="certification-card">
-                    <h3 class="certification-title"></h3>
-                    <span class="certification-issuer"></span>
-                    <p class="certification-details"></p>
+                    <h3 class="certification-title">RPA Developer Foundation</h3>
+                    <span class="certification-issuer">UiPath</span>
+                    <p class="certification-details">UI Automation, Process Analysis, Deployment & Maintenance, Problem Solving, Communication & Collaboration</p>
                 </div>
             </div>
         </div>
@@ -1702,9 +1657,10 @@
                         <i class="fas fa-envelope"></i>
                         <div class="contact-text">
                             <h3>Email</h3>
-                            <a href="mailto:nilishagarg19@gmail.com">nilishagarg19@gmail.com</a>
+                            <a href="mailto:nilishagarg19@gmail.com?subject=Contact%20from%20Portfolio">nilishagarg19@gmail.com</a>
                         </div>
                     </div>
+
                     
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
@@ -1726,47 +1682,23 @@
                         <i class="fab fa-linkedin-in"></i>
                         <div class="contact-text">
                             <h3>LinkedIn</h3>
-                            <a href="https://www.linkedin.com/in/nilishagarg/" target="_blank">linkedin.com/in/nilishagarg</a>
+                            <a href="https://www.linkedin.com/in/nilisha-garg/" target="_blank">linkedin.com/in/nilisha-garg</a>
                         </div>
                     </div>
                 </div>
-                
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" class="form-control" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" class="form-control" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" class="form-control" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" class="form-control" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <p class="footer-text"></p>
                 
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/nilishagarg/" target="_blank"><i class="fab fa-linkedin-in"></i></a>                                        
-                    <a href="mailto:nilishagarg19@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/nilisha-garg/" target="_blank"><i class="fab fa-linkedin-in"></i></a>                                        
+                    <a href="mailto:nilishagarg19@gmail.com?subject=Contact%20from%20Portfolio"><i class="fas fa-envelope"></i></a>
                 </div>
                 
                 <p class="copyright">© 2025 Nilisha. All rights reserved.</p>
@@ -1835,37 +1767,6 @@
                     behavior: 'smooth'
                 });
             });
-            
-            // Form validation
-            const contactForm = document.getElementById('contactForm');
-            
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Simple validation
-                const name = document.getElementById('name').value.trim();
-                const email = document.getElementById('email').value.trim();
-                const message = document.getElementById('message').value.trim();
-                
-                if (name === '' || email === '' || message === '') {
-                    alert('Please fill in all required fields.');
-                    return;
-                }
-                
-                if (!validateEmail(email)) {
-                    alert('Please enter a valid email address.');
-                    return;
-                }
-                
-                // Form submission success (simulated)
-                alert('Thank you for your message! I will get back to you soon.');
-                contactForm.reset();
-            });
-            
-            function validateEmail(email) {
-                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                return re.test(email);
-            }
             
             // Scroll animations
             const animateOnScroll = function() {
